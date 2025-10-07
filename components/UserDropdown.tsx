@@ -33,7 +33,7 @@ const UserDropdown = () => {
                     <Avatar className="h-8 w-8">
                         <AvatarImage src="https://github.com/shadcn.png" />
                         <AvatarFallback className="bg-yellow-500 text-yellow-900 text-sm font-bold">
-                            {user.name[0]}
+                            {user.name?.[0]?.toUpperCase() || 'U'}
                         </AvatarFallback>
                     </Avatar>
                     <div className="hidden md:flex flex-col items-start">
@@ -51,7 +51,7 @@ const UserDropdown = () => {
                         <Avatar className="h-10 w-10">
                             <AvatarImage src="https://github.com/shadcn.png" />
                             <AvatarFallback className="bg-yellow-500 text-yellow-900 text-sm font-bold">
-                                {user.name[0]}
+                                {user.name?.[0]?.toUpperCase() || 'U'}
                             </AvatarFallback>
                         </Avatar>
                         <div className="flex flex-col ">
@@ -71,7 +71,7 @@ const UserDropdown = () => {
                     <LogOut className="h-4 w-4 mr-2 hidden sm:block" />
                     Logout
                 </DropdownMenuItem>
-                <DropdownMenuSeparator className="Hidden sm:block bg-gray-600"/>
+                <DropdownMenuSeparator className="hidden sm:block bg-gray-600"/>
                 <nav className="sm:hidden">
                     <NavItems/>
 
